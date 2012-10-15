@@ -1,6 +1,6 @@
-# Roderik's dotfiles
+# LWille's dotfiles
 
-This is a fork of Mathias’s dotfiles customised for my use.
+This is a fork of @Roderik 's dotfiles customised for my use.
 
 ## Installation
 
