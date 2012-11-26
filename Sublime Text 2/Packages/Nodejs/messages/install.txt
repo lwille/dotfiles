@@ -19,7 +19,7 @@ You can access node commands in two ways.
 
 * Via the menu in `Tools -> Node`
 * By accessing the Command Palette and typing `node`
-
+ 
 The current commands available are (with Windows binding, other bindings are provided):
 
 * Run current script in node (Alt + R)
@@ -71,3 +71,4 @@ Author & Contributors
 ----------------------
 [Tane Piper](http://twitter.com/tanepiper) - if you find this plugin useful then please ping me if you would like to
 donate to my Sublime Text 2 licence fund
+

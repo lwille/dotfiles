@@ -1,6 +1,6 @@
 [
     {
-	"caption": "Modific: Show diff",
-	"command": "show_diff"
+        "caption": "Modific: Show diff",
+        "command": "show_diff"
     }
 ]

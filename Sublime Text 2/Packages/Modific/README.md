@@ -24,15 +24,15 @@ The "Packages" directory is located at:
 
 * OS X:
 
-	~/Library/Application Support/Sublime Text 2/Packages/
+        ~/Library/Application Support/Sublime Text 2/Packages/
 
 * Linux:
 
-	~/.config/sublime-text-2/Packages/
+        ~/.config/sublime-text-2/Packages/
 
 * Windows:
 
-	%APPDATA%/Sublime Text 2/Packages/
+        %APPDATA%/Sublime Text 2/Packages/
 
 Please, make sure your VCS binaries is in the PATH (**especially if you are on Windows**).
 

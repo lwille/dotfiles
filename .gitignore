@@ -14,3 +14,7 @@ Thumbs.db
 .Trashes
 Sublime Text 2/Packages/Default/Meta Info Summary.cache
 Sublime Text 2/Packages/Default/Syntax Summary.cache
+*.cache
+Sublime Text 2/Packages/SublimeCodeIntel/libs/_local_arch/_SilverCity.so
+Sublime Text 2/Packages/SublimeCodeIntel/libs/_local_arch/ciElementTree.so
+Sublime Text 2/Packages/SublimeCodeIntel/libs/_local_arch/sgmlop.so

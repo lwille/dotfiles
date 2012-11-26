@@ -1,12 +1,26 @@
 {
-	"auto_upgrade_last_run": 1351670624,
+	"auto_upgrade_last_run": 1353932446,
 	"installed_packages":
 	[
+		"Andrew",
 		"BracketHighlighter",
+		"CoffeeScript",
+		"Jade",
+		"Modific",
+		"Nodejs",
 		"Package Control",
+		"PhpBeautifier",
+		"PhpDoc",
+		"PhpDox",
+		"SideBarGit",
+		"Stylus",
+		"sublime-jslint",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"Tag",
 		"Theme - Aqua",
-		"Theme - Soda"
+		"Theme - Soda",
+		"TrailingSpaces",
+		"ZenCoding"
 	]
 }

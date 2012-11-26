@@ -34,10 +34,10 @@ class CommandThread(threading.Thread):
       # get $PATH on Windows. Yay portable code.
       shell = os.name == 'nt'
       if self.working_dir != "":
-	os.chdir(self.working_dir)
+        os.chdir(self.working_dir)
       proc = subprocess.Popen(self.command,
-	stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-	shell=shell, universal_newlines=True)
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        shell=shell, universal_newlines=True)
       output = proc.communicate()[0]
       # if sublime's python gets bumped to 2.7 we can just do:
       # output = subprocess.check_output(self.command)
@@ -46,6 +46,6 @@ class CommandThread(threading.Thread):
       main_thread(self.on_done, e.returncode)
     except OSError, e:
       if e.errno == 2:
-	main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
+        main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
       else:
-	raise e
+        raise e

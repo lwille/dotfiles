@@ -33,18 +33,18 @@ var startUglify = function (options) {
       data_collection.push(data);
 
       if (data_collection.length === j) {
-	uglify_data(data_collection, function(err, data) {
-	  if (err) throw err;
-	  if (options.output) {
-	    var outpath = path.resolve(options.output);
-	    fs.writeFile(outpath, function(err) {
-	      if (err) throw err;
-	    })
-	  } else {
-	    console.log(data);
-	  }
-
-	});
+        uglify_data(data_collection, function(err, data) {
+          if (err) throw err;
+          if (options.output) {
+            var outpath = path.resolve(options.output);
+            fs.writeFile(outpath, function(err) {
+              if (err) throw err;
+            })
+          } else {
+            console.log(data);
+          }
+          
+        });
       }
     });
   }

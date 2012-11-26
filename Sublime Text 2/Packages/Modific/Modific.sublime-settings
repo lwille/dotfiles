@@ -7,10 +7,10 @@
     // You can use your commands instead of plain "git" or "svn"
     // e.g. "/usr/bin/git" or "C:\bin\git.exe"
     "vcs": [
-	["git", "git"],
-	["svn", "svn"],
-	["bzr", "bzr"],
-	["hg" , "hg"]
+        ["git", "git"],
+        ["svn", "svn"],
+        ["bzr", "bzr"],
+        ["hg" , "hg"]
     ],
 
     //if you have some weird OS, that has non-unicode console
