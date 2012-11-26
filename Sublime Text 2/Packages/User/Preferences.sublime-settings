@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Tomorrow-Night-Eighties.tmTheme",
+	"color_scheme": "Packages/Tomorrow-Night-Bright.tmTheme",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
@@ -18,11 +18,12 @@
 		"tmp"
 	],
 	"font_face": "Source Code Pro",
+	"font_size": 17.0,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"remember_open_files": false,
-	"save_on_focus_lost": true,
-	"tab_size": 4,
+	"save_on_focus_lost": false,
+	"tab_size": 2,
 	"theme": "ProKit.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true

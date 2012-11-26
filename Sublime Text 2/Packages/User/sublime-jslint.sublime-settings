@@ -1,0 +1,9 @@
+{
+  "ignore_errors": [
+    // "Expected an identifier and instead saw 'undefined' \(a reserved word\)"
+    ".*semicolon.*",
+    ".*nsafe character.*",
+    "Expected an identifier and instead saw 'eval' \\(a reserved word\\)"
+  ],
+  "debug": true
+}
