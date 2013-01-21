@@ -19,6 +19,10 @@ function doIt() {
             ln -sf `pwd`/Sublime\ Text\ 2/Pristine\ Packages ~/Library/Application\ Support/Sublime\ Text\ 2/Pristine\ Packages
         fi
     fi
+    SUBL_PATH="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
+    if [ -f "$SUBL_PATH" ] && [ ! -f /usr/local/bin/subl ]; then
+      ln -s "$SUBL_PATH" /usr/local/bin/subl
+    fi
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     doIt
