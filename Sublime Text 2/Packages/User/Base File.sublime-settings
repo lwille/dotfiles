@@ -1,6 +1,5 @@
 {
   "codeintel_syntax_map": {
-    "HTML": "PHP",
-    "C": "C"
+    "HTML": "PHP"
   }
 }

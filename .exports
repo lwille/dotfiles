@@ -27,5 +27,4 @@ export PGHOST=/tmp
 export COPYFILE_DISABLE=true
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
-
 export TZ='Europe/Brussels'
