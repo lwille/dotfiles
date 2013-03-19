@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<TextView
+<TextView 
     android:layout_width="${1:fill_parent}${2:wrap_content}"
     android:layout_height="${3:fill_parent}${4:wrap_content}"
     android:id="@+id/${5}"

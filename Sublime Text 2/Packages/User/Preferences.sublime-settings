@@ -18,14 +18,14 @@
 		"tmp"
 	],
 	"font_face": "Source Code Pro",
-	"font_size": 17.0,
+	"font_size": 18.0,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"remember_open_files": false,
+	"remember_open_files": true,
 	"save_on_focus_lost": false,
 	"tab_size": 2,
 	"theme": "ProKit.sublime-theme",

@@ -47,7 +47,7 @@
 			"mnemonic":"R"
 		},
 		{
-			"caption":"Compile...",
+			"caption":"Compile...", 
 			"id":"compile",
 			"mnemonic":"C",
 			"children":
@@ -83,7 +83,7 @@
 			]
 		},
 		{
-			"caption":"Android managers",
+			"caption":"Android managers", 
 			"id":"andrew_managers",
 			"mnemonic":"M",
 			"children":
@@ -108,7 +108,7 @@
 			]
 		},
 		{
-			"caption":"Preferences",
+			"caption":"Preferences", 
 			"id":"andrew_preferences",
 			"mnemonic":"P",
 			"children":

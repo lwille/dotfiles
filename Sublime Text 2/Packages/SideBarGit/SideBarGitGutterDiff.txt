@@ -47,7 +47,7 @@ class SideBarGitGutterDiff(sublime_plugin.EventListener):
 					view.settings().set('SideBarGitGutterPath', item.forCwdSystemPathRelativeFrom(repos[0].repository.path()))
 				else:
 					view.settings().set('SideBarGitGutterRepository', '')
-
+			
 			# if in a repo check for modifications
 			repo =  view.settings().get('SideBarGitGutterRepository')
 			if repo != '':

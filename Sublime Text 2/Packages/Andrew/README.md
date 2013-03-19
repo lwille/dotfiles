@@ -28,7 +28,7 @@ In order to use Andrew, you need:
 
 ## First steps ##
 
-Before you start coding, you should set your environment.
+Before you start coding, you should set your environment. 
 
 1. Go to the `Andrew > Preferences > Locate SDK` command and choose whether you prefer to write it down manually or search it automatically.
 2. Go to the `Andrew > Preferences > Workspace path` command and select where you want to create projects by default. More or less like the Eclipse workspace.

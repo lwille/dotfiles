@@ -1,5 +1,8 @@
 {
   "codeintel_syntax_map": {
     "HTML": "PHP"
-  }
+  },
+  "codeintel_disabled_languages": [
+    "JavaScript"
+  ]
 }

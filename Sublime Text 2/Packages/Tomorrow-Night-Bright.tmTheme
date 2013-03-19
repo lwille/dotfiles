@@ -77,7 +77,7 @@
 			<key>name</key>
 			<string>Class, Support</string>
 			<key>scope</key>
-			<string>entity.name.class, entity.name.type.class, support.type, support.class</string>
+			<string>entity.name.class, entity.name.type.class, support.type, support.class, entity.name.type.interface</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -189,7 +189,7 @@
 				<key>foreground</key>
 				<string>#FFFFFF</string>
 			</dict>
-		</dict>				
+		</dict>
 		<dict>
 			<key>name</key>
 			<string>Diff insertion</string>
@@ -224,7 +224,7 @@
 				<key>background</key>
 				<string>#4271ae</string>
 			</dict>
-		</dict>		
+		</dict>
 		<dict>
 			<key>name</key>
 			<string>Diff range</string>
