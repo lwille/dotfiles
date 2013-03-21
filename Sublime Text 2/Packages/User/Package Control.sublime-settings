@@ -2,8 +2,10 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Additional PHP Snippets",
 		"Alignment",
 		"Andrew",
+		"AndyPHP",
 		"BracketHighlighter",
 		"CoffeeScript",
 		"DashDoc",
@@ -12,9 +14,10 @@
 		"Modific",
 		"Nodejs",
 		"Package Control",
+		"PHP Namespace Command",
 		"PhpBeautifier",
-		"PhpDoc",
 		"PhpDox",
+		"PhpTidy",
 		"SideBarGit",
 		"Stylus",
 		"sublime-jslint",
