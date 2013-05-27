@@ -55,9 +55,11 @@ def import_pyv8():
 	# throw exception even if this module appear in PYTHONPATH.
 	# To prevent this, we have to manually test if 
 	# PyV8.py(c) exists in PYTHONPATH before importing PyV8
-	if 'PyV8' in sys.modules and 'PyV8' not in globals():
+	if 'PyV8' in sys.modules:
 		# PyV8 was loaded by ST2, create global alias
-		globals()['PyV8'] = __import__('PyV8')
+		if 'PyV8' not in globals():
+			globals()['PyV8'] = __import__('PyV8')
+			
 		return
 
 	loaded = False
@@ -102,6 +104,7 @@ class Context():
 			pass
 
 		self._ctx = None
+		self._ctx_inited = False
 		self._contrib = contrib
 		self._should_load_extension = True
 
@@ -164,12 +167,15 @@ class Context():
 			if self._use_unicode is None:
 				self._use_unicode = should_use_unicode()
 
-			glue = u'\n' if self._use_unicode else '\n'
-			core_src = [self.read_js_file(make_path(f)) for f in self._core_files]
-			
-			self._ctx = PyV8.JSContext()
+			class Global():
+				isEmmet = True
+
+			self._ctx_inited = False
+			self._ctx = PyV8.JSContext(Global())
 			self._ctx.enter()
-			self._ctx.eval(glue.join(core_src))
+
+			for f in self._core_files:
+				self.eval_js_file(f)
 
 			# load default snippets
 			self._ctx.locals.pyLoadSystemSnippets(self.read_js_file(make_path('snippets.json')))
@@ -182,14 +188,21 @@ class Context():
 				for k in self._contrib:
 					self._ctx.locals[k] = self._contrib[k]
 
-		if self._should_load_extension:
-			self._ctx.locals.pyResetUserData()
-			self._should_load_extension = False
-			self.load_extensions()
+			self._ctx_inited = True
+		
+		if not hasattr(PyV8.JSContext.current.locals, 'isEmmet'):
+			print('Enter Emmet context')
+			self._ctx.enter()
 
-		if self._user_data:
-			self._ctx.locals.pyLoadUserData(self._user_data)
-			self._user_data = None
+		if self._ctx_inited:
+			if self._should_load_extension:
+				self._ctx.locals.pyResetUserData()
+				self._should_load_extension = False
+				self.load_extensions()
+
+			if self._user_data:
+				self._ctx.locals.pyLoadUserData(self._user_data)
+				self._user_data = None
 
 		return self._ctx
 
@@ -211,11 +224,12 @@ class Context():
 
 		self._should_load_extension = True
 
-	def read_js_file(self, file_path):
-		return self.reader(file_path, self._use_unicode)
+	def read_js_file(self, file_path, resolve_path=False):
+		full_path = make_path(file_path) if resolve_path else file_path
+		return self.reader(full_path, self._use_unicode)
 
 	def eval(self, source):
 		self.js().eval(source)
 
-	def eval_js_file(self, file_path):
-		self.eval(self.read_js_file(file_path))
+	def eval_js_file(self, file_path, resolve_path=True):
+		self.js().eval(self.read_js_file(file_path, resolve_path), name=file_path, line=0, col=0)
