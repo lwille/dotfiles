@@ -1,3 +1,23 @@
+# start a VM and log into it
+# @param name Name of the vm
+function vm() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: vm [vmname]"
+        return -1
+    fi
+    name="$1"
+    host=$(hostname -s)
+    host=${host%%-air}
+
+    echo Starting $name.$host
+    vmstart "$name"
+    while ! nc -z local.$name.$host.vm.bln 22; do
+        sleep 2
+    done
+    osascript -e 'tell application "System Events" to set visible of process "VirtualBox VM" to false'
+    ssh root@local.$name.$host.vm.bln
+}
+
 # Simple calculator
 function calc() {
 	local result=""
