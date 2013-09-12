@@ -23,26 +23,26 @@ class AsyncProcess(object):
   def poll(self):
     while True:
       if self.proc.poll() != None:
-	sublime.set_timeout(functools.partial(self.listener.proc_terminated, self.proc), 0)
-	break
+        sublime.set_timeout(functools.partial(self.listener.proc_terminated, self.proc), 0)
+        break
       time.sleep(0.1)
 
   def read_stdout(self):
     while True:
       data = os.read(self.proc.stdout.fileno(), 2**15)
       if data != "":
-	sublime.set_timeout(functools.partial(self.listener.append_data, self.proc, data), 0)
+        sublime.set_timeout(functools.partial(self.listener.append_data, self.proc, data), 0)
       else:
-	self.proc.stdout.close()
-	self.listener.is_running = False
-	break
+        self.proc.stdout.close()
+        self.listener.is_running = False
+        break
 
   def read_stderr(self):
     while True:
       data = os.read(self.proc.stderr.fileno(), 2**15)
       if data != "":
-	sublime.set_timeout(functools.partial(self.listener.append_data, self.proc, data), 0)
+        sublime.set_timeout(functools.partial(self.listener.append_data, self.proc, data), 0)
       else:
-	self.proc.stderr.close()
-	self.listener.is_running = False
-	break
+        self.proc.stderr.close()
+        self.listener.is_running = False
+        break

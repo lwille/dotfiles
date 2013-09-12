@@ -33,9 +33,9 @@ Installation
 - Download and extract to Sublime Text 2 Packages folder
 
     > Windows:  %APPDATA%\Sublime Text 2\Packages
-
+    
     > Mac OS X: ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
-
+    
     > Linux:    ~/.config/sublime-text-2/Packages
 
 How to use?
@@ -59,24 +59,24 @@ Settings
 Settings can be opened via the Command Palette, or the Preferences > Package Settings > JSLint > Settings – User menu entry.
 
     {
-	// Path to the jslint jar.
-	// Leave blank to use bundled jar.
-	"jslint_jar": "",
+        // Path to the jslint jar.
+        // Leave blank to use bundled jar.
+        "jslint_jar": "",
 
-	// Options pass to jslint.
-	"jslint_options": "",
+        // Options pass to jslint.
+        "jslint_options": "",
 
-	// Ignore errors, regex.
-	"ignore_errors":
-	[
-	    // "Expected an identifier and instead saw 'undefined' \(a reserved word\)"
-	],
+        // Ignore errors, regex.
+        "ignore_errors":
+        [
+            // "Expected an identifier and instead saw 'undefined' \(a reserved word\)"
+        ],
 
-	// run jslint on save.
-	"run_on_save": false,
+        // run jslint on save.
+        "run_on_save": false,
 
-	// debug flag.
-	"debug": false
+        // debug flag.
+        "debug": false
     }
 
 The available jslint_options: https://github.com/fbzhong/sublime-jslint/wiki/Available-jslint4java-options

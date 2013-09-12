@@ -36,9 +36,9 @@ class JslintCommand(sublime_plugin.WindowCommand):
       cmd = 'jslint ' + s.get('node_jslint_options', '') + ' "' + file_path + '"'
     else:
       if len(s.get('jslint_jar', '')) > 0:
-	jslint_jar = s.get('jslint_jar')
+        jslint_jar = s.get('jslint_jar')
       else:
-	jslint_jar = sublime.packages_path() + '/sublime-jslint/jslint4java-2.0.1.jar'
+        jslint_jar = sublime.packages_path() + '/sublime-jslint/jslint4java-2.0.5-SNAPSHOT.jar'
       cmd = 'java -jar "' + jslint_jar + '" ' + s.get('jslint_options', '') + ' "' + file_path + '"'
 
     if self.debug:
@@ -76,31 +76,31 @@ class JslintCommand(sublime_plugin.WindowCommand):
     if end == False:
       rsep_pos = data.rfind('\n')
       if rsep_pos == -1:
-	# not found full line.
-	return
+        # not found full line.
+        return
       self.buffered_data = data[rsep_pos+1:]
       data = data[:rsep_pos+1]
-    print "Foo"
+
     # ignore error.
     text = data
     if (len(self.ignore_errors) > 0) and (not self.use_node_jslint):
       text = ''
       for line in data.split('\n'):
-	if len(line) == 0:
-	  continue
-	ignored = False
-	for rule in self.ignore_errors:
-	  if re.search(rule, line):
-	    ignored = True
-	    self.ignored_error_count += 1
-	    if self.debug:
-	      print "text match line "
-	      print "rule = " + rule
-	      print "line = " + line
-	      print "---------"
-	    break
-	if ignored == False:
-	  text += line + '\n'
+        if len(line) == 0:
+          continue
+        ignored = False
+        for rule in self.ignore_errors:
+          if re.search(rule, line):
+            ignored = True
+            self.ignored_error_count += 1
+            if self.debug:
+              print "text match line "
+              print "rule = " + rule
+              print "line = " + line
+              print "---------"
+            break
+        if ignored == False:
+          text += line + '\n'
 
 
     self.show_tests_panel()
@@ -179,12 +179,12 @@ class JsLintEventListener(sublime_plugin.EventListener):
       text = view.substr(region)
       text = re.findall(pattern_position, text)
       if len(text) > 0:
-	line = int(text[0][0])
-	col = int(text[0][1])
+        line = int(text[0][0])
+        col = int(text[0][1])
     else:
       text = view.substr(region).split(':')
       if len(text) < 4 or text[0] != 'jslint' or re.match('\d+', text[2]) == None or re.match('\d+', text[3]) == None:
-	  return
+          return
       line = int(text[2])
       col = int(text[3])
 
@@ -197,8 +197,8 @@ class JsLintEventListener(sublime_plugin.EventListener):
     file_view = None
     for v in window.views():
       if v.file_name() == file_path:
-	file_view = v
-	break
+        file_view = v
+        break
     if file_view == None:
       return
 
@@ -209,3 +209,5 @@ class JsLintEventListener(sublime_plugin.EventListener):
 
     # highlight file_view line
     file_view.add_regions(RESULT_VIEW_NAME, [file_region], "string")
+
+

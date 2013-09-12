@@ -3,7 +3,6 @@
 	"installed_packages":
 	[
 		"Additional PHP Snippets",
-		"Alignment",
 		"Andrew",
 		"AndyPHP",
 		"BracketHighlighter",
@@ -24,7 +23,6 @@
 		"sublime-jslint",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"Tag",
 		"Theme - Aqua",
 		"Theme - Soda",
 		"TrailingSpaces"

@@ -15,12 +15,12 @@
     "jslint_jar": "",
 
     // Options pass to jslint.
-    "jslint_options": "--sloppy",
+    "jslint_options": "",
 
     // Ignore errors, regex.
     "ignore_errors":
     [
-	// "Expected an identifier and instead saw 'undefined' \(a reserved word\)"
+        // "Expected an identifier and instead saw 'undefined' \(a reserved word\)"
     ],
 
     // run jslint on save.

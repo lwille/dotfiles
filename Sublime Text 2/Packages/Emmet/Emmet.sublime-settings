@@ -18,14 +18,14 @@
 	"show_css_completions": true,
 
 	// List of scopes where Emmet CSS completions should be available
-	"css_completions_scope": "source.css - meta.selector.css - meta.property-value.css, source.scss - meta.selector.scss - meta.property-value.scss",
+	"css_completions_scope": "source.css - meta.selector.css - meta.property-value.css, source.scss - meta.selector.scss - meta.property-value.scss, source.less - meta.selector.css - meta.property-value.css",
 
 	// Remove default HTML tag completions on plugin start
 	// You should restart editor after changing this option
 	"remove_html_completions": false,
 
 	// A comma-separated list of scopes where Emmet’s Tab key
-	// abbreviation expander should be disabled	 
+	// abbreviation expander should be disabled
 	"disable_tab_abbreviations_for_scopes": "",
 
 	// A regexp for scope name: if it matches, Tab handler won’t work
@@ -52,9 +52,9 @@
 	// Leave this setting blank to disable this feature
 	"disabled_single_snippet_for_scopes": "text.html",
 
-	// A space-separated list of single snippets that should be 
-	// forcilbly disabled (not handled) for Emmet even if it 
-	// has such abbreviation. 
+	// A space-separated list of single snippets that should be
+	// forcilbly disabled (not handled) for Emmet even if it
+	// has such abbreviation.
 	// This option is useful if you wish the enumerated snippets
 	// should be handled by Sublime Text.
 	// Example value: "script style html"
@@ -74,7 +74,7 @@
 	// With this option enabled, your custom profile for HTML documents may not work.
 	"autodetect_xhtml": true,
 
-	// Use old Tab handler to exand abbreviations.
+	// Use old Tab handler to expand abbreviations.
 	// With this option enabled, editor may better handle Tab key
 	// (especially with other plugins that overrides Tab key),
 	// but will spit "slow plugin" message
@@ -82,7 +82,7 @@
 
 	///////////////////////////////
 	// Emmet customization
-	// Each section has the same meaning as the same-named JSON file 
+	// Each section has the same meaning as the same-named JSON file
 	// described here:
 	// http://docs.emmet.io/customization/
 	///////////////////////////////
@@ -109,6 +109,6 @@
 	// http://docs.emmet.io/customization/syntax-profiles/
 	"syntaxProfiles": {
 		// Enable XHTML dialect for HTML syntax
-		// "html": "xhtml"
+		"html": "xhtml"
 	}
 }
