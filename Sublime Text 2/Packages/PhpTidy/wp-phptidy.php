@@ -108,8 +108,8 @@ $indent = true;
 ///////////// END OF DEFAULT CONFIGURATION ////////////////
 
 
-define( 'CONFIGFILE', "./.phptidy-config.php" );
-define( 'CACHEFILE', "./.phptidy-cache" );
+define( 'CONFIGFILE', dirname(__FILE__) . "/.wp-phptidy-config.php" );
+define( 'CACHEFILE', dirname(__FILE__) . "/.phptidy-cache" );
 
 
 error_reporting( E_ALL );
@@ -1250,9 +1250,22 @@ function fix_docblock_format( &$tokens ) {
 			if ( $line=="" ) continue;
 			if ( $line!="/**" and $line!="*/" ) {
 
-				// Add stars where missing
-				if ( substr( $line, 0, 1 )!="*" ) $line = "* ".$line;
-				elseif ( $line!="*" and substr( $line, 0, 2 )!="* " ) $line = "* ".substr( $line, 1 );
+				// test for single-line comments
+				$docblock_start = '/**';
+				$docblock_end = '*/';
+				if ( substr( $line, 0, 3 ) === $docblock_start and
+					substr_compare($line, $docblock_end, -strlen($docblock_end), strlen($docblock_end)) === 0
+					) {
+					return;
+				} else {
+					// Add stars where missing
+					if ( substr( $line, 0, 1 )!="*" ) {
+					 $line = "* ".$line;
+					}
+					elseif( $line!="*" and substr( $line, 0, 2 )!="* " ) {
+					 $line = "* ".substr( $line, 1 );
+					}
+				}
 
 				// Strip empty lines at the beginning
 				if ( !$comments_started ) {
@@ -2229,7 +2242,7 @@ function add_file_docblock( &$tokens ) {
 
 
 /**
- * Adds funktion DocBlocks where missing
+ * Adds function DocBlocks where missing
  *
  * @param array   $tokens (reference)
  */

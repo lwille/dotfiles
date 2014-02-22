@@ -1,16 +1,20 @@
 # Andrew #
 
-Andrew is a lightweight Android Development Project for Sublime Text 2. It combines perfectly with [ADBView](https://github.com/quarnster/ADBView) to get a functional Android development environment.
-
-## Notice: Andrew from Bitbucket is deprecated! ##
-
-Andrew from Bitbucket has been deprecated in favor of its version on Github. If you are using Package Control, **you may not be able to automatically update to the Github version**, as it may count as a new plugin. However, Will Bond (the one maintaining Package Control) needs to accept the change, and it may take a while for the Github version to appear on the Install list.
-
-If you want to have it right now (Windows and ST3 support!), you can download it from https://github.com/Korcholis/Andrew, or you can clone it, moving to the Packages directory and hitting:
-
-    git clone git://github.com/Korcholis/Andrew.git
+Andrew is a lightweight Android Development Project for Sublime Text 2 and Sublime Text 3. It makes use of [Monitor](http://developer.android.com/tools/help/monitor.html) to get a fully functional environment for Android development, without the hassle of a big IDE.
 
 ## Recent Changes ##
+
+###0.3.2###
+
+* Added support for Windows (locate SDK, create/import projects, use of Monitor)
+* Removed DDMS, Devices and SDK Manager, and changed them for Monitor (the mix of all of them from the latest versions of Android SDK)
+* Import updates a project, so it can be used with Andrew and Sublime Text
+* Added some shortcuts
+
+###0.3.1###
+
+* Moved to Github
+* Removed Windows support (until it is finally on)
 
 ###0.3###
 
@@ -76,3 +80,5 @@ Have you got a glorious feature you'd like to include? Have you found a bug and 
 ## License ##
 
 This is an open git project for Sublime Text 2. Anyone can contribute here, fork, use this project however you want. It is free of charge, and comes with no warranty. Always use this along with a versioning system to avoid any problem. Use at your own risk.
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/11a8d94fa4fd2098219b0d8b5e069986 "githalytics.com")](http://githalytics.com/Korcholis/Andrew)

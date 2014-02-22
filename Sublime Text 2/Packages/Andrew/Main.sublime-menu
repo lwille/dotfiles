@@ -1,7 +1,7 @@
 [
 {
 	"id":"andrew",
-	"caption":"Andrew (deprecated!)",
+	"caption":"Andrew",
 	"mnemonic":"A",
 	"children":
 	[
@@ -47,6 +47,12 @@
 			"mnemonic":"R"
 		},
 		{
+			"caption":"Android Monitor", 
+			"id":"android_monitor",
+			"mnemonic":"M",
+			"command":"open_monitor"
+		},
+		{
 			"caption":"Compile...", 
 			"id":"compile",
 			"mnemonic":"C",
@@ -83,31 +89,6 @@
 			]
 		},
 		{
-			"caption":"Android managers", 
-			"id":"andrew_managers",
-			"mnemonic":"M",
-			"children":
-			[
-				{
-					"id":"Android SDK Manager",
-					"caption":"Android SDK Manager",
-					"command":"open_sdk",
-					"mnemonic":"S"
-				},
-				{
-					"id":"Android Devices",
-					"command":"open_devices",
-					"mnemonic":"D"
-				},
-				{
-					"id":"DDMS",
-					"caption":"DDMS",
-					"command":"open_ddms",
-					"mnemonic":"M"
-				}
-			]
-		},
-		{
 			"caption":"Preferences", 
 			"id":"andrew_preferences",
 			"mnemonic":"P",
@@ -126,12 +107,6 @@
 					"mnemonic":"W"
 				}
 			]
-		},
-		{
-			"caption":"Why is Andrew Deprecated? (README)", 
-			"id":"andrew_deprecated",
-			"command":"andrew_deprecated",
-			"mnemonic":"D"
 		}
 	]
 }
